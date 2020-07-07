@@ -1,0 +1,4 @@
+__label__3 this is a dummy line of type 3
+__label__2 this is a dummy line of type 2
+__label__1 this is a dummy line of type 1
+__label__3 this is a dummy line of type 3

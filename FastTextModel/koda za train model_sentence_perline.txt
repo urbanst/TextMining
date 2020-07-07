@@ -1,0 +1,98 @@
+#first we have to prepare our dataset. as classes faculties will be used (14 faculties == 14 classes)
+# https://medium.com/@ravindraprasad/build-your-own-text-classification-in-less-than-25-lines-of-code-using-fasttext-dae7229f80f9
+
+    
+# iterate over dictionary and key index, key and value out of dictionary and for each legal act add label
+stringtext=''
+testtext=''
+
+# ***************************************UM ********************************
+for i, (k, v) in enumerate(documents_um.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__um'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_um_feri.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__umferi'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_um_fzv.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__umfzv'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_um_pef.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__umpef'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+# ***************************************UL ********************************
+for i, (k, v) in enumerate(documents_ul.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__ul'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_ul_pef.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__ulpef'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_ul_fri.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__ulfri'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_ul_fzv.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__ulzf'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+# ***************************************UP ********************************
+for i, (k, v) in enumerate(documents_up.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__up'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_up_pef.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__uppef'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_up_famnit.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__upfamnit'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+   
+   
+# ***************************************UNNM ********************************
+for i, (k, v) in enumerate(documents_unnm_fpuv.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__unnmfpuv'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_unnm_fzv.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__unnmfzv'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+for i, (k, v) in enumerate(documents_unnm_fei.items()):
+    if v.strip()!='':
+        sentences_list=nltk.sent_tokenize(v)
+        for i in range(len(sentences_list)): 
+            stringtext=stringtext+'\n'+'__label__unnmfei'+' '+ str.join(" ", sentences_list[i].splitlines())+' '
+
+
